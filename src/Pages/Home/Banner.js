@@ -1,6 +1,7 @@
 import React from 'react';
 import chair from "../../assets/images/chair.png";
 import bannerBgImage from "../../assets/images/bg.png";
+import PrimaryButton from '../Shared/PrimaryButton';
 
 const Banner = () => {
     return (
@@ -11,7 +12,8 @@ const Banner = () => {
                 <div>
                     <h1 className="text-5xl font-bold">Your New Smile Starts Here.</h1>
                     <p className="py-6">"Experience the Future of Healthcare with Our Cutting-Edge Doctor Portal! Streamline your practice, enhance patient care, and stay ahead of the curve with our intuitive and comprehensive platform. Join the ranks of top-tier healthcare professionals who trust us to revolutionize their daily operations. Discover the difference today!"</p>
-                    <button className="btn btn-primary font-bold text-white bg-gradient-to-r from-secondary to-primary ">Get Started</button>
+
+                    <PrimaryButton>get started</PrimaryButton>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import fluoride from "../../assets/images/fluoride.png";
 import cavity from "../../assets/images/cavity.png";
 import whitening from "../../assets/images/whitening.png";
 import treatment from "../../assets/images/treatment.png";
+import PrimaryButton from '../Shared/PrimaryButton';
 
 const Services = () => {
 
@@ -52,7 +53,7 @@ const Services = () => {
                     <h2 className="card-title  font-bold text-2xl sm:text-4xl">Exceptional Dental Care, on Your Terms.</h2>
                     <p>At our dental practice, we believe in providing Exceptional Dental Care on Your Terms. With our team of highly skilled and compassionate professionals, we're dedicated to delivering top-notch dental care that's not only effective but also convenient and comfortable for you. Experience dentistry reimagined, where your well-being and satisfaction come first.</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary text-white font-bold">get start</button>
+                        <PrimaryButton>Get Started</PrimaryButton>
                     </div>
                 </div>
             </div>
