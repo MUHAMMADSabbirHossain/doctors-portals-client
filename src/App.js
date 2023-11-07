@@ -6,10 +6,11 @@ import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Login from './Pages/Login/Login';
 import Footer from './Pages/Shared/Footer';
+import Appointment from './Appointment/Appointment';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App max-w-[1920px] mx-auto">
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
+        <Route path="/appointment" element={<Appointment></Appointment>}></Route>
         <Route path="/login" element={<Login></Login>} ></Route>
       </Routes>
 
