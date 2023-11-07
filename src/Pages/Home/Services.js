@@ -34,13 +34,13 @@ const Services = () => {
 
 
     return (
-        <section className="my-16">
+        <section className="my-16 px-12">
             <div>
                 <h2 className="text-secondary font-bold uppercase text-lg">Our services</h2>
                 <p className="capitalize text-2xl font-semibold">Services we provie</p>
             </div>
 
-            <div className=" my-10 grid md:grid-cols-3 gap-10 ">
+            <div className=" my-10 grid md:grid-cols-3 gap-10">
                 {
                     servicesDetails.map(serviceDetails => <Service key={serviceDetails._id} serviceDetails={serviceDetails}></Service>)
                 }

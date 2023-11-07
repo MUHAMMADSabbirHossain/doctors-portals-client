@@ -34,7 +34,7 @@ const Info = () => {
 
     return (
 
-        <div className="text-white md:grid md:grid-cols-3 gap-10">
+        <div className="text-white md:grid md:grid-cols-3 gap-10 px-12">
             {
                 infoDetails.map(cartDetails => <InfoCard key={cartDetails._id} cartDetails={cartDetails}></InfoCard>)
             }
