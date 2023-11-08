@@ -1,5 +1,4 @@
 import React from 'react';
-import PrimaryButton from "../Pages/Shared/PrimaryButton";
 
 const Service = ({ service }) => {
     const { name, slots } = service;
@@ -18,7 +17,7 @@ const Service = ({ service }) => {
                 <p className="font-semibold">{slots.length} {slots.length > 1 ? "spaces" : "space"} available.</p>
 
                 <div className="card-actions justify-center" >
-                    <button disabled={slots.length === 0} class="btn btn-secondary text-white font-bold uppercase">Book Appointment</button>
+                    <button disabled={slots.length === 0} className="btn btn-secondary text-white font-bold uppercase">Book Appointment</button>
                 </div>
             </div>
         </div >

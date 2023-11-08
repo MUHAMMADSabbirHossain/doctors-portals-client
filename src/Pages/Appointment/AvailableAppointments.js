@@ -11,7 +11,7 @@ const AvailableAppointments = ({ date }) => {
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);
-    console.log(services);
+    // console.log(services);
 
 
     return (
@@ -22,7 +22,7 @@ const AvailableAppointments = ({ date }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-20">
                 {
                     services.map(service =>
-                        <button className='btn lg:max-w-96 bg-base-100 shadow-xl py-20 text-secondary font-bold uppercase'>
+                        <button key={service._id} className='btn lg:max-w-96 bg-base-100 shadow-xl py-20 text-secondary font-bold uppercase'>
                             {service.name}
                         </button>
                     )
