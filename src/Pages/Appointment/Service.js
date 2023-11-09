@@ -21,8 +21,8 @@ const Service = ({ service, setTreatment }) => {
                         disabled={slots.length === 0}
                         className="btn btn-secondary text-white font-bold uppercase"
                         onClick={() => {
-                            document.getElementById('booking-modal').showModal()
                             setTreatment(service)
+                            document.getElementById('booking-modal').showModal()
                         }}>
                         Book Appointment
                     </button>
