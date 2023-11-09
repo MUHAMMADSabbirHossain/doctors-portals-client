@@ -29,7 +29,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
 
                     <form method="dialog">
                         {/* if there is a button in form, it will close the modal */}
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        <button className="btn btn-sm btn-circle btn-accent absolute right-2 top-2">✕</button>
                     </form>
 
                     <h3 className="font-bold text-lg text-secondary">Booking For: {name}</h3>
@@ -49,7 +49,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
                         <input type="text" name="name" placeholder="Your name" className="input input-bordered w-full max-w-xs" />
                         <input type="email" name="email" placeholder="Email Address" className="input input-bordered w-full max-w-xs" />
                         <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
-                        <input type="submit" value="Sbumit" className="btn btn-secondary text-white font-bold text-lg input-bordered w-full max-w-xs" />
+                        <input type="submit" value="Sbumit" className="btn btn-accent text-white font-bold text-lg input-bordered w-full max-w-xs" />
 
                     </form>
 
@@ -57,7 +57,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
                     <div className="modal-action">
                         <form method="dialog">
                             {/* if there is a button in form, it will close the modal */}
-                            <button className="btn">Close</button>
+                            <button className="btn btn-accent text-white">Close</button>
                         </form>
                     </div>
                 </div>
