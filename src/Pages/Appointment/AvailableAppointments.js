@@ -10,7 +10,7 @@ const AvailableAppointments = ({ date }) => {
 
 
     useEffect(() => {
-        const url = `services.json`;
+        const url = `http://localhost:5000/service`;
         fetch(url)
             .then(res => res.json())
             .then(data => setServices(data));
@@ -43,7 +43,7 @@ const AvailableAppointments = ({ date }) => {
             </div>
 
             {console.log(treatment)}
-            {treatment && <BookingModal treatment={treatment}></BookingModal>}
+            {treatment && <BookingModal date={date} treatment={treatment} setTreatment={setTreatment}></BookingModal>}
         </section>
     );
 };
