@@ -36,14 +36,22 @@ const AvailableAppointments = ({ date }) => {
 
             <h2 className="text-secondary text-lg font-bold">Available slots for Teeth Orthodontics: ({services.length}).</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-12">
                 {
-                    services.map(service => <Service key={service._id} service={service} setTreatment={setTreatment}></Service>)
+                    services.map(service => <Service
+                        key={service._id}
+                        service={service}
+                        setTreatment={setTreatment}>
+                    </Service>)
                 }
             </div>
 
             {console.log(treatment)}
-            {treatment && <BookingModal date={date} treatment={treatment} setTreatment={setTreatment}></BookingModal>}
+            {treatment && <BookingModal
+                date={date}
+                treatment={treatment}
+                setTreatment={setTreatment}>
+            </BookingModal>}
         </section>
     );
 };

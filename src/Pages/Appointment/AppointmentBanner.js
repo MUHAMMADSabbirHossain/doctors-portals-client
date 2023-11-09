@@ -12,7 +12,7 @@ const AppointmentBanner = ({ date, setDate }) => {
     };
 
     return (
-        <section className="hero min-h-screen ">
+        <section className="min-h-screen ">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src={chair} className="max-w-sm lg:max-w-xl rounded-lg shadow-2xl" alt="Dentist chair" />
                 <div>

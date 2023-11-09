@@ -2,6 +2,7 @@ import React from 'react';
 
 const Service = ({ service, setTreatment }) => {
     const { name, slots } = service;
+
     return (
         <div className="card lg:max-w-96 bg-base-100 shadow-xl">
             <div className="card-body">
@@ -19,7 +20,7 @@ const Service = ({ service, setTreatment }) => {
                 <div className="card-actions justify-center" >
                     <button
                         disabled={slots.length === 0}
-                        className="btn btn-secondary text-white font-bold uppercase"
+                        className="btn text-white font-bold uppercase bg-gradient-to-r from-secondary to-primary"
                         onClick={() => {
                             setTreatment(service)
                             document.getElementById('booking-modal').showModal()
