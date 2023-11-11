@@ -3,7 +3,7 @@
         "_id": 1,
         "name": "Teeth Orthodontics",
         "slots": [
-            "08.00 AM - 08.30 Am",
+            "08.00 AM - 08.30 AM",
             "08,30 AM - 09.00 AM",
             "09.00 AM - 09.30 AM",
             "09.30 AM - 10.00 AM",
@@ -27,7 +27,7 @@
         "_id": 2,
         "name": "Cosmetic Dentistry",
         "slots": [
-            "08.00 AM - 08.30 Am",
+            "08.00 AM - 08.30 AM",
             "08,30 AM - 09.00 AM",
             "09.00 AM - 09.30 AM",
             "09.30 AM - 10.00 AM",
@@ -51,7 +51,7 @@
         "_id": 3,
         "name": "Teeth Cheaning",
         "slots": [
-            "08.00 AM - 08.30 Am",
+            "08.00 AM - 08.30 AM",
             "08,30 AM - 09.00 AM",
             "09.00 AM - 09.30 AM",
             "09.30 AM - 10.00 AM",
@@ -75,7 +75,7 @@
         "_id": 4,
         "name": "Cavity Protection",
         "slots": [
-            "08.00 AM - 08.30 Am",
+            "08.00 AM - 08.30 AM",
             "08,30 AM - 09.00 AM",
             "09.00 AM - 09.30 AM",
             "09.30 AM - 10.00 AM",
@@ -99,7 +99,7 @@
         "_id": 5,
         "name": "Pediatric Dental",
         "slots": [
-            "08.00 AM - 08.30 Am",
+            "08.00 AM - 08.30 AM",
             "08,30 AM - 09.00 AM",
             "09.00 AM - 09.30 AM",
             "09.30 AM - 10.00 AM",
@@ -123,7 +123,7 @@
         "_id": 6,
         "name": "Oral Surgery",
         "slots": [
-            "08.00 AM - 08.30 Am",
+            "08.00 AM - 08.30 AM",
             "08,30 AM - 09.00 AM",
             "09.00 AM - 09.30 AM",
             "09.30 AM - 10.00 AM",
