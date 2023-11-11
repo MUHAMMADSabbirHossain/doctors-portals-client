@@ -2,24 +2,52 @@ import React from 'react';
 import { format } from 'date-fns';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
+import { toast } from 'react-toastify';
 
 const BookingModal = ({ date, treatment, setTreatment }) => {
 
     const { _id, name, slots } = treatment;
     const [user, loading, error] = useAuthState(auth);
-
+    const formattedDate = format(date, "PP");
     const handleBooking = event => {
         event.preventDefault();
 
         const slot = event.target.slot.value;
-        const name = event.target.name.value;
-        const email = event.target.email.value;
-        const phone = event.target.phone.value;
-        console.log(_id, slot, name, email, phone);
+        /*  const name = event.target.name.value;
+         const email = event.target.email.value;
+         const phone = event.target.phone.value;
+         console.log(_id, slot, name, email, phone); */
 
+        const booking = {
+            treatmentId: _id,
+            treatment: name,
+            date: formattedDate,
+            slot,
+            patient: user.email,
+            patientName: user.displayName,
+            phone: event.target.phone.value,
+        };
 
-        // to close the  modal
-        // setTreatment(null);
+        fetch(`http://localhost:5000/booking`, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(booking),
+        })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                if (data.success) {
+                    toast(`Appointment is set, ${formattedDate} at ${slot}`);
+
+                    // to close the  modal
+                    // setTreatment(null);
+                }
+                else {
+                    toast.error(`Already have an Appoinment on ${data.booking?.data} at ${data.booking?.slot}`);
+                };
+            });
     };
 
 
