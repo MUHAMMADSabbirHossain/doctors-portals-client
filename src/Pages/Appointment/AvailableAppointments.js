@@ -8,7 +8,7 @@ const AvailableAppointments = ({ date }) => {
     const [services, setServices] = useState([]);
     const [treatment, setTreatment] = useState(true);
 
-    const formattedDate = format(date, "PP")
+    const formattedDate = format(date, "PP");
     useEffect(() => {
         const url = `http://localhost:5000/available?date=${formattedDate}`;
         fetch(url)
