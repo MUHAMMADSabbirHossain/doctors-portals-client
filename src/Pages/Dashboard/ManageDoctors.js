@@ -72,7 +72,7 @@ const ManageDoctors = () => {
                                 doctor={doctor}
                                 index={index}
                                 /* refetch={refetch }*/
-                                setDeletingDoctor={deletingDoctor}>
+                                setDeletingDoctor={setDeletingDoctor}>
                             </DoctorRow>)
                         }
                     </tbody>
