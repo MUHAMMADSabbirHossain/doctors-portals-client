@@ -14,33 +14,40 @@ const ManageDoctors = () => {
     // }).then(res => res.json())
     const { data: doctors, isLoading, refetch } = useQuery({
         queryKey: ["doctors"],
-        queryFn: () =>
-            fetch(`http://localhost:5000/doctor`, {
-                headers: {
-                    authorizaiton: `Bearer ${localStorage.getItem("accessToken")}`,
-                },
-            })
-                .then(res => res.json()),
+        queryFn: async () => {
+            try {
+                const res = await fetch(`http://localhost:5000/doctor`, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+                    },
+                });
+                const data = await res.json()
+                return data;
+            }
+            catch (error) {
+
+            }
+        }
     });
 
     if (isLoading) {
         return <Loading></Loading>
     }
-    console.log(doctors, localStorage.getItem("accessToken"));
     /*  const [doctors, setDoctors] = useState([]);
-     useEffect(() => {
-         fetch(`http://localhost:5000/doctor`, {
-             headers: {
-                 authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-             },
-         })
-             .then(res => res.json())
-             .then(data => {
-                 setDoctors(data);
-                 console.log(doctors);
-             });
-     }, []); */
+    useEffect(() => {
+        fetch(`http://localhost:5000/doctor`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
+        })
+        .then(res => res.json())
+        .then(data => {
+            setDoctors(data);
+            console.log(doctors);
+        });
+    }, []); */
 
+    console.log(doctors, localStorage.getItem("accessToken"));
 
     return (
         <div>
